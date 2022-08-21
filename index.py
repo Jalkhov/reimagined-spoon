@@ -1,5 +1,5 @@
 class Spoon(object):
-    """docstring for Spoon"""
+    """Main spoon class"""
 
     def __init__(self):
         super(Spoon, self).__init__()
