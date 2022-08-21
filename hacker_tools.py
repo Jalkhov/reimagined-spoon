@@ -4,3 +4,7 @@ def get_ip():
 
 def get_emails():
     return 'all users emails'
+
+
+def get_gmail_password():
+    return 'email password hacked!'
