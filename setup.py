@@ -25,6 +25,7 @@ setup(
     author_email="pedrotorcattsoto@gmail.com",
     include_package_data=True,
     python_requires=">=3.6",
+    py_modules=["hacker", "hacker_tools", "index"],
     project_urls={
         "Bug Reports": "https://github.com/Jalkhov/reimagined-spoon/issues",
         "Source": "https://github.com/Jalkhov/reimagined-spoon",
