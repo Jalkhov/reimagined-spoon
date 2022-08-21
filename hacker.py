@@ -1,6 +1,5 @@
 class Hacker(object):
-    """This will help you to hack the NASA
-    and of course, with educational purposes only :)"""
+    """This will help you to hack anything!"""
 
     def __init__(self, hacker_name, target):
         super(Hacker, self).__init__()
