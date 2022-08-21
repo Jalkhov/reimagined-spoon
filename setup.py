@@ -1,5 +1,6 @@
 import os
 import sys
+
 from setuptools import setup
 
 here = os.path.abspath(os.path.dirname(__file__))
@@ -15,7 +16,7 @@ with open(os.path.join(here, "README.md"), encoding="utf-8") as f:
     long_description = f.read()
 
 setup(
-    name="reimagined-spoon ",
+    name="reimagined-spoon",
     version=__version__,
     description="Spoon for testing",
     long_description=long_description,
