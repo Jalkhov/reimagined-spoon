@@ -13,6 +13,9 @@ class Spoon(object):
         elif 2 > 1:
             print("2 es mayor que 1")
 
+    def spoon(self):
+        print("Spoon")
+
 
 spoon = Spoon()
 spoon.talk(message='¡Hola amigo!')
