@@ -3,7 +3,7 @@ import sys
 from setuptools import setup
 
 here = os.path.abspath(os.path.dirname(__file__))
-__version__ = "1.1.0"
+__version__ = "1.0.0"
 
 
 if sys.argv[-1] == "publish":
