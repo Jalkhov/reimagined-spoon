@@ -1,5 +1,5 @@
-def get_ip():
-    return '198.120.0.1'
+def get_ip(host):
+    return host.ip_address()
 
 
 def get_emails():
