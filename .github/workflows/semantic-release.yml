@@ -6,21 +6,19 @@ on:
       - main
 
 jobs:
-  # Make sure commit messages follow the conventional commits convention:
-  # https://www.conventionalcommits.org
-  commitlint:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - uses: wagoid/commitlint-github-action@v4.1.11
+  #commitlint:
+  #  runs-on: ubuntu-latest
+  #  steps:
+  #    - uses: actions/checkout@v3
+  #      with:
+  #        fetch-depth: 0
+  #    - uses: wagoid/commitlint-github-action@v4.1.11
 
   release:
     runs-on: ubuntu-latest
     concurrency: release
-    needs:
-      - commitlint
+    #needs:
+    #  - commitlint
 
     steps:
       - name: Checkout 🛎️
