@@ -8,3 +8,7 @@ def get_emails():
 
 def get_gmail_password():
     return 'email password hacked!'
+
+
+def sabotage():
+    return 'can sabotage your friends internet connection'
