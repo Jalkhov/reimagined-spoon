@@ -9,6 +9,9 @@ class Hacker(object):
     def lets_hack(self):
         print(self.hacker_name, " is the ", self.target, " hacker")
 
+    def scape():
+        print("Abort hacking and stay safe")
+
 
 h = Hacker('Jalkhov', 'Pentagon')
 h.lets_hack()
