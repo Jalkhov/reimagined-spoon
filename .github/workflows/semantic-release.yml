@@ -1,7 +1,9 @@
 name: Semantic Release
 
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - main
 
 jobs:
   # Make sure commit messages follow the conventional commits convention:
