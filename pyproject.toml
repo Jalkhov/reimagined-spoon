@@ -1,6 +1,9 @@
 [tool.semantic_release]
 version_variable = "setup.py:__version__"
 version_source = "tag"
+build_command = "pip install poetry && poetry build"
+commit_subject = "chore(release): {version}"
 branch = "main"
 upload_to_pypi = true
 upload_to_release = true
+commit_parser = "semantic_release.history.emoji_parser"
