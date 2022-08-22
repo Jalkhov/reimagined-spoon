@@ -4,18 +4,41 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Make sure commit messages follow the conventional commits convention:
+  # https://www.conventionalcommits.org
+  commitlint:
+    - name: Lint Commit Messages
+      runs-on: ubuntu-latest
+
+      steps:
+        - uses: actions/checkout@v3
+          with:
+            fetch-depth: 0
+        - uses: wagoid/commitlint-github-action@v4.1.11
+
   release:
     runs-on: ubuntu-latest
     concurrency: release
 
-    steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+    if: github.ref == 'refs/heads/main'
+    needs:
+    #   - test
+    #   - lint
+      - commitlint
 
-    - name: Python Semantic Release
-      uses: relekang/python-semantic-release@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        repository_username: __token__
-        repository_password: ${{ secrets.PYPI_TOKEN }}
+    steps:
+      - name: Checkout 🛎️
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Setup Git
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+      - name: Python Semantic Release
+        uses: relekang/python-semantic-release@v7.31.2
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          pypi_token: ${{ secrets.PYPI_TOKEN }}
