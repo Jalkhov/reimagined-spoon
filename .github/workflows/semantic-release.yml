@@ -32,8 +32,7 @@ jobs:
           git config user.email "<>"
 
       - name: Python Semantic Release 🐍
-        # uses: relekang/python-semantic-release@v7.31.2
-        uses: betaboon/python-semantic-release@master
+        uses: relekang/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}
